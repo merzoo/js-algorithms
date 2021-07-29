@@ -1,15 +1,16 @@
 Array.prototype.selectionSort = function () {
   for (let i = 0; i < this.length - 1; i++) {
-    let indexMin = i;
+    let minIndex = i;
+
     for (let j = i; j < this.length; j++) {
-      if (this[j] < this[indexMin]) {
-        indexMin = j;
+      if (this[minIndex] > this[j]) {
+        minIndex = j;
       }
     }
 
     const temp = this[i];
-    this[i] = this[indexMin];
-    this[indexMin] = temp;
+    this[i] = this[minIndex];
+    this[minIndex] = temp;
   }
 };
 
