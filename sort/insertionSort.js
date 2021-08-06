@@ -4,8 +4,8 @@ Array.prototype.insertionSort = function () {
     let j = i;
 
     while (j > 0) {
-      if (this[j - 1] > temp) {
-        this[j] = this[j - 1]; // 往后挪一位
+      if (temp < this[j - 1]) {
+        this[j] = this[j - 1];
       } else {
         break;
       }
@@ -15,7 +15,6 @@ Array.prototype.insertionSort = function () {
     this[j] = temp;
   }
 };
-
 const arr = [5, 4, 3, 2, 1];
 arr.insertionSort();
 
