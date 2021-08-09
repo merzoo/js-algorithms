@@ -8,17 +8,16 @@ Array.prototype.mergeSort = function () {
 
     const orderLeft = rec(l);
     const orderRight = rec(r);
-
     const res = [];
 
     while (orderLeft.length || orderRight.length) {
-      if (orderLeft.length && orderRight.length) {
+      if (orderRight.length && orderLeft.length) {
         res.push(
           orderLeft[0] < orderRight[0] ? orderLeft.shift() : orderRight.shift()
         );
       } else if (orderLeft.length) {
         res.push(orderLeft.shift());
-      } else if (orderRight.length) {
+      } else {
         res.push(orderRight.shift());
       }
     }

@@ -1,11 +1,9 @@
 Array.prototype.quickSort = function () {
   const rec = (arr) => {
-    if (arr.length <= 1) {
-      return arr;
-    }
+    if (arr.length <= 1) return arr;
 
-    const left = [];
-    const right = [];
+    let left = [];
+    let right = [];
     const mid = arr[0];
 
     for (let i = 1; i < arr.length; i++) {
@@ -20,7 +18,7 @@ Array.prototype.quickSort = function () {
   };
 
   const res = rec(this);
-  res.forEach((n, i) => (this[i] = n));
+  res.forEach((item, i) => (this[i] = item));
 };
 
 const arr = [5, 4, 3, 2, 1];

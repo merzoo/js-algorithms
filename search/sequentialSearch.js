@@ -1,13 +1,14 @@
-Array.prototype.sequentialSearch = function (n) {
+Array.prototype.sequentialSearch = function (item) {
   for (let i = 0; i < this.length; i++) {
-    if (this[i] === n) {
+    if (this[i] === item) {
       return i;
     }
   }
+
   return -1;
 };
 
 // test case
 const arr = [1, 2, 3, 4, 5];
-const res = arr.sequentialSearch(2);
-const res2 = arr.sequentialSearch(8);
+console.log(arr.sequentialSearch(2));
+console.log(arr.sequentialSearch(8));

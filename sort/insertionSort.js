@@ -15,6 +15,7 @@ Array.prototype.insertionSort = function () {
     this[j] = temp;
   }
 };
+
 const arr = [5, 4, 3, 2, 1];
 arr.insertionSort();
 
