@@ -1,4 +1,4 @@
-class Stack {
+class Queue {
   constructor(data) {
     this.data = data || [];
   }
@@ -7,12 +7,16 @@ class Stack {
     this.data.push();
   }
 
-  peek() {
-    return this.data[this.data.length - 1];
+  pop() {
+    return this.data.shift();
   }
 
-  pop() {
-    return this.data.pop();
+  peek() {
+    return this.data[0];
+  }
+
+  length() {
+    return this.data.length;
   }
 
   empty() {
