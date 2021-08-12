@@ -1,7 +1,6 @@
 Array.prototype.mergeSort = function () {
   const rec = (arr) => {
     if (arr.length === 1) return arr;
-
     const mid = Math.floor(arr.length / 2);
     const l = arr.slice(0, mid);
     const r = arr.slice(mid);
@@ -11,7 +10,7 @@ Array.prototype.mergeSort = function () {
     const res = [];
 
     while (orderLeft.length || orderRight.length) {
-      if (orderRight.length && orderLeft.length) {
+      if (orderLeft.length && orderRight.length) {
         res.push(
           orderLeft[0] < orderRight[0] ? orderLeft.shift() : orderRight.shift()
         );
@@ -25,7 +24,7 @@ Array.prototype.mergeSort = function () {
     return res;
   };
 
-  const res = rec(this);
+  const res = rec(arr);
   res.forEach((item, i) => (this[i] = item));
 };
 

@@ -1,9 +1,9 @@
 Array.prototype.selectionSort = function () {
-  for (let i = 0; i < this.length; i++) {
+  for (let i = 0; i < this.length - 1; i++) {
     const temp = this[i];
     let minIndex = i;
 
-    for (let j = i; j < this.length; j++) {
+    for (let j = i + 1; j < this.length; j++) {
       if (this[j] < temp) {
         minIndex = j;
       }
@@ -14,7 +14,7 @@ Array.prototype.selectionSort = function () {
   }
 };
 
-const arr = [5, 4, 3, 2, 1];
+const arr = [5, 4, 3, 2, 1, 7];
 
 arr.selectionSort();
 
