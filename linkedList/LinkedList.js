@@ -98,10 +98,10 @@ class LinkedList {
     return this.size() === 0;
   }
   getHead() {
-    return this.head();
+    return this.head;
   }
   toString() {
-    if (this.head == null) {
+    if (this.getHead() == null) {
       return "";
     }
     let objString = `${this.head.val}`;
