@@ -4,7 +4,7 @@ Array.prototype.selectionSort = function () {
     let minIndex = i;
 
     for (let j = i + 1; j < this.length; j++) {
-      if (this[j] < temp) {
+      if (this[j] < this[minIndex]) {
         minIndex = j;
       }
     }
